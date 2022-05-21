@@ -1,31 +1,16 @@
 # 密碼重設程式
+password = 'a123456s'
+i = 3
 while True:
-	password = 'a123456s'
-	password = input('請輸入密碼: ')
-	if password == 'a123456s':
-		print('登入成功!')
+	pws = input('請輸入密碼: ')
+	if pws == password:
+		print('登入成功')
 		break
-	else: 
-		print('密碼錯誤 還有2次機會')
-		while True:
-			password = input('請輸入密碼: ')
-			if password == 'a123456s':
-				print('登入成功!')
-				break
-			else: 
-				print('密碼錯誤 還有1次機會')
-				while True:
-					password = input('請輸入密碼: ')
-					if password == 'a123456s':
-						print('登入成功!')
-						break
-					else: 
-						print('密碼錯誤 GG')
-						break
-				break
+	else:
+		i = i - 1
+		print('密碼錯誤 你還有', i, '次機會')
+	if i == 0:
 		break
 		
-
-
 
 
